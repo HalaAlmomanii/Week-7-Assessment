@@ -2,11 +2,34 @@
 <html>
 
 <head>
+		<script src="jquery-3.4.1.min.js"> </script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<!-- WRITE YOUR CODE UNDER THIS LINE          -->
 </head>
 
 <body>
-	<!-- WRITE YOUR CODE UNDER THIS LINE          -->
-</body>
 
+		<input type="button" value='green' id='yes'style="background-color: green"></buuton>
+		<input type="button" value='red' id='no'style="background-color: red"></buuton>
+		<div class='main'>Main div is here</div>
+
+
+   <script>
+		// $( "body" ).add( "<div class='main'>Main div is here</div>" )
+		// $( "body" ).add( "<buuton value='Red' id='no'></buuton>" ).css( "background-color", "red" )
+		// $( "body" ).add( "<buuton value='green' id='yes'></buuton>" ).css( "background-color", "green" )
+		// $("title").html("Q4")
+
+
+		$( "#no" ).on("click",function() {
+		 $(".main").css( "background-color", "red" )
+		})
+
+	
+		$( "#yes" ).on("click",function() {
+		 $(".main").css( "background-color", "green" )
+		})
+		</script>
+	
+</body>
 </html>

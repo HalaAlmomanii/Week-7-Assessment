@@ -22,9 +22,22 @@ Output =>
 [49, 20, 500]
 
 */
+var arr1=[7,2,50]
+function MultiByNum1OrNum2(arr1,num1,num2) {
+  
+  var result= arr1.map(function(element){
+  
+  if(element%num1===0)
+  {
+   return element*num1
+  }
+   else 
+    return  element*num2
 
-function MultiByNum1OrNum2() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+    
+  })
+
+  return result 
 }
 
 /* Q2:
@@ -57,9 +70,21 @@ Output =>
   { name: "mercer",age:26}
 ]
 */
+var arr2=[ { name: "alex" ,age:22},
+{ name: "mercer",age:26},
+{ name: "alice" ,age:33},
+{ name: "zaheer",age:35},
+{ name: "elizabeth",age:45}]
 
-function longerAndYounger() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function longerAndYounger(arr2,num1,num2) {
+
+         var result=arr2.filter(function(element){
+
+           return element.name.length>num1 && element.age.length< num2
+
+         })
+
+         return result 
 }
 
 /* Q3:
@@ -89,9 +114,25 @@ Output =>
 "alice, fried chiken, pizaa, burger, hot dog, eggs"
   
 */
-function nameAndAllFoods() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+var arr3=[  { name: "alex", food: "fried chiken" },
+{ name: "mercer", food: "pizaa" },
+{ name: "alice", food: "burger" },
+{ name: "zaheer", food: "hot dog" },
+{ name: "elizabeth", food: "eggs" }]
+
+function nameAndAllFoods(arr3,num) {
+         var st=""
+  var result=arr3.reduce(function(acc,element){
+    
+    st=element.food
+    return acc+"," + st
+
+  },arr3[num].name)
+
+  return result 
 }
+
+
 
 
 /*
